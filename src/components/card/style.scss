@@ -11,4 +11,25 @@
     font-size: 14px;
     color: #444;
   }
+
+  &-footer {
+    &-notifications {
+      background-color: #eb5a46;
+      padding: 2px;
+      width: 24px;
+      border-radius: 3px;
+      margin-top: 4px;
+    }
+
+    &-amount {
+      font-size: 12px;
+      color: #fff;
+    }
+
+    &-icon {
+      font-size: 14px;
+      color: #fff;
+      margin-right: 4px;
+    }
+  }
 }
