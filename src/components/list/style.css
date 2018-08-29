@@ -1,0 +1,30 @@
+.List {
+  background-color: #e2e4e6;
+  width: 272px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%; }
+  .List-header {
+    margin-bottom: 8px;
+    padding: 16px 16px 0; }
+    .List-header-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 4px;
+      flex: 1; }
+    .List-header-menu {
+      color: #8c8c8c;
+      font-size: 12px; }
+    .List-header-amount {
+      font-size: 14px;
+      color: #8c8c8c; }
+    .List-header-titleWrapper {
+      display: flex; }
+  .List-body {
+    flex: 1 1 auto;
+    padding: 0 8px 16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 0; }
