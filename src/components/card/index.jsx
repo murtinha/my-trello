@@ -9,7 +9,7 @@ export const Card: SComponent<Props> = ({
   <div className="Card">
     <div className="Card-description">
       {description}
-    </div> 
+    </div>
 
     <div className="Card-footer">
       <div className="Card-footer-notifications">
@@ -19,7 +19,7 @@ export const Card: SComponent<Props> = ({
         </span>
       </div>
     </div>
-  </div>  
+  </div>
 );
 
 export default Card;

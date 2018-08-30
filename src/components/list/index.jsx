@@ -11,23 +11,23 @@ const List: SComponent<Props> = ({
     ? 'cards'
     : 'card';
   return (
-   <div className="List">
-     <div className="List-header">
-       <div className="List-header-titleWrapper">
-         <div className="List-header-title">
-           {title} 
-         </div>
-         <span className="List-header-menu fas fa-ellipsis-h" />
-       </div>
-       <div className="List-header-amount">
-         {`${cardsAmount} ${amountText}`}
-       </div>
-     </div> 
+    <div className="List">
+      <div className="List-header">
+        <div className="List-header-titleWrapper">
+          <div className="List-header-title">
+            {title}
+          </div>
+          <span className="List-header-menu fas fa-ellipsis-h" />
+        </div>
+        <div className="List-header-amount">
+          {`${cardsAmount} ${amountText}`}
+        </div>
+      </div>
 
-     <div className="List-body">
-       {children} 
-     </div>
-   </div>
+      <div className="List-body">
+        {children}
+      </div>
+    </div>
   );
 };
 
