@@ -16,8 +16,7 @@ export const Card: SComponent<Props> = ({
       {description}
     </div>
 
-    <div className="Card-footer">
-    </div>
+    <div className="Card-footer" />
   </div>
 );
 

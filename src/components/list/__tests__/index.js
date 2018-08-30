@@ -7,12 +7,12 @@ describe('<List />', () => {
   describe('render', () => {
     it('should render properly', () => {
       const comp = TestRenderer
-       .create(
+        .create(
           <List title="titulo">
             <div>CHILDREN</div>
           </List>
         )
-       .toJSON();
+        .toJSON();
       expect(comp).toMatchSnapshot();
     });
   });
