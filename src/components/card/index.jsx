@@ -1,10 +1,15 @@
+// @flow
+
 import React from 'react';
 
 import './style.css';
 
+type Props = {
+  description: string,
+}
+
 export const Card: SComponent<Props> = ({
   description,
-  amountNotifications = 1,
 }) => (
   <div className="Card">
     <div className="Card-description">
@@ -12,12 +17,6 @@ export const Card: SComponent<Props> = ({
     </div>
 
     <div className="Card-footer">
-      <div className="Card-footer-notifications">
-        <span className="Card-footer-icon far fa-bell" />
-        <span className="Card-footer-amount">
-          {amountNotifications}
-        </span>
-      </div>
     </div>
   </div>
 );

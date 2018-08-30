@@ -57,7 +57,8 @@
     "build-js": "node scripts/build.js",
     "build": "npm-run-all build-css build-js",
     "test": "node scripts/test.js --env=jsdom",
-    "lint": "eslint --ext .js,.jsx src"
+    "lint": "eslint --ext .js,.jsx src",
+    "flow": "flow check ./src/"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -100,5 +101,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.79.1",
+    "flowtype": "^2.0.0"
   }
 }

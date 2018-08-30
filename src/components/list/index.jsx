@@ -1,6 +1,13 @@
+// @flow
+
 import React from 'react';
 
 import './style.css';
+
+type Props = {
+  title: string,
+  children: React$Node,
+}
 
 const List: SComponent<Props> = ({
   title,
