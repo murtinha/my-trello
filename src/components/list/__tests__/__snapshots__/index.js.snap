@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> render should render properly 1`] = `
+<div
+  className="List"
+>
+  <div
+    className="List-header"
+  >
+    <div
+      className="List-header-titleWrapper"
+    >
+      <div
+        className="List-header-title"
+      >
+        titulo
+      </div>
+      <span
+        className="List-header-menu fas fa-ellipsis-h"
+      />
+    </div>
+    <div
+      className="List-header-amount"
+    >
+      1 card
+    </div>
+  </div>
+  <div
+    className="List-body"
+  >
+    <div>
+      CHILDREN
+    </div>
+  </div>
+</div>
+`;

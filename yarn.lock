@@ -1429,7 +1429,7 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "http://nexus.apps.jusbr.com/repository/npm-all/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-"cell@github:jkroso/cell":
+cell@jkroso/cell:
   version "1.0.2"
   resolved "https://codeload.github.com/jkroso/cell/tar.gz/6db4991ebff09e344d7c1211c4abdcc62aff479e"
 
@@ -4593,7 +4593,7 @@ merge@^1.2.0:
   version "1.2.0"
   resolved "http://nexus.apps.jusbr.com/repository/npm-all/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
-"merge@github:yields/merge":
+merge@yields/merge:
   version "1.0.1"
   resolved "https://codeload.github.com/yields/merge/tar.gz/2f357cb501cd06f1a86394b7817e5df73c53f644"
 
@@ -5890,6 +5890,19 @@ react-dom@^16.4.2:
 react-error-overlay@^4.0.1:
   version "4.0.1"
   resolved "http://nexus.apps.jusbr.com/repository/npm-all/react-error-overlay/-/react-error-overlay-4.0.1.tgz#417addb0814a90f3a7082eacba7cee588d00da89"
+
+react-is@^16.4.2:
+  version "16.4.2"
+  resolved "http://nexus.apps.jusbr.com/repository/npm-all/react-is/-/react-is-16.4.2.tgz#84891b56c2b6d9efdee577cc83501dfc5ecead88"
+
+react-test-renderer@^16.4.2:
+  version "16.4.2"
+  resolved "http://nexus.apps.jusbr.com/repository/npm-all/react-test-renderer/-/react-test-renderer-16.4.2.tgz#4e03eca9359bb3210d4373f7547d1364218ef74e"
+  dependencies:
+    fbjs "^0.8.16"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+    react-is "^16.4.2"
 
 react@^16.4.2:
   version "16.4.2"

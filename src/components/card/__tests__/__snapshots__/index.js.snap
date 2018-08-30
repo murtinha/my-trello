@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> render should render properly 1`] = `
+<div
+  className="Card"
+>
+  <div
+    className="Card-description"
+  >
+    ola
+  </div>
+  <div
+    className="Card-footer"
+  />
+</div>
+`;

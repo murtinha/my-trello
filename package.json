@@ -104,6 +104,7 @@
   },
   "devDependencies": {
     "flow-bin": "^0.79.1",
-    "flowtype": "^2.0.0"
+    "flowtype": "^2.0.0",
+    "react-test-renderer": "^16.4.2"
   }
 }
