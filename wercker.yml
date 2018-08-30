@@ -1,0 +1,24 @@
+box: node
+
+build:
+  steps:
+    - script:
+        name: install dependencies
+        code: yarn install --frozen-lockfile
+
+    - script:
+        name: Testing
+        code: yarn test
+
+    - script:
+        name: Check lint
+        code: yarn lint
+
+    - script:
+        name: Check flow
+        code: yarn flow
+
+    - script:
+        name: Babel+Webpack compile
+        code: yarn build
+
