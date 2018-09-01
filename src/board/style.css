@@ -1,7 +1,6 @@
-.Home {
+.Board {
   display: flex;
   flex-direction: row;
   padding: 16px;
   background-color: #2899F0;
-  width: 100%;
-}
+  width: 100%; }

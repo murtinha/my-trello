@@ -1,41 +1,51 @@
 // @flow
 
 import React from 'react';
+import { Droppable } from 'react-beautiful-dnd';
+import type { ListType } from '../../data';
+import Card from '../card';
 
 import './style.css';
 
 type Props = {
-  title: string,
-  children: React$Node,
+  list: ListType,
 }
 
-const List: SComponent<Props> = ({
-  title,
-  children,
-}) => {
-  const cardsAmount = React.Children.count(children);
-  const amountText = cardsAmount > 1 && cardsAmount !== 0
-    ? 'cards'
-    : 'card';
-  return (
-    <div className="List">
-      <div className="List-header">
-        <div className="List-header-titleWrapper">
-          <div className="List-header-title">
-            {title}
+class List extends React.Component<Props> {
+  render() {
+    const { cards, title, id } = this.props.list;
+    return (
+      <div className="List">
+        <div className="List-header">
+          <div className="List-header-titleWrapper">
+            <div className="List-header-title">
+              {title}
+            </div>
+            <span className="List-header-menu fas fa-ellipsis-h" />
           </div>
-          <span className="List-header-menu fas fa-ellipsis-h" />
         </div>
-        <div className="List-header-amount">
-          {`${cardsAmount} ${amountText}`}
-        </div>
-      </div>
 
-      <div className="List-body">
-        {children}
+        <Droppable droppableId={id}>
+          {provided => (
+            <div
+              className="List-body"
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {cards.map((card, idx) => (
+                <Card
+                  card={card}
+                  index={idx}
+                  key={card.id}
+                />
+              ))}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default List;

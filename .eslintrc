@@ -28,11 +28,12 @@
     "flowtype/use-flow-type": 1,
     "import/prefer-default-export": 0,
     "import/no-named-as-default": 0,
+    "react/prefer-stateless-function": 0,
     "import/no-unresolved": [2, { "ignore": ["^[~]"] }],
 
     "no-undef": 0,
     "new-cap": 0,
-    "no-console": [2, { "allow": ["warn", "error"] }],
+    "no-console": 0,
 
     "no-unused-vars": [2, { "argsIgnorePattern": "^_$", "varsIgnorePattern": "^_$" }],
 
