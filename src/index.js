@@ -20,61 +20,70 @@ class App extends React.Component<Props, State> {
     this.state = initialData;
   }
 
-  onDragEnd = result => {
+  sameListDrop(result) {
     const { destination, source, draggableId } = result;
+    const list = this.state.lists[source.droppableId];
+    const newCardIds = [...list.cardIds];
+    newCardIds.splice(source.index, 1);
+    newCardIds.splice(destination.index, 0, draggableId);
 
+    const newList = {
+      ...list,
+      cardIds: newCardIds,
+    };
+
+    const newState = {
+      ...this.state,
+      lists: {
+        ...this.state.lists,
+        [newList.id]: newList,
+      },
+    };
+
+    this.setState(newState);
+  }
+
+  differentListDrop(result) {
+    const { destination, source, draggableId } = result;
+    const sourceList = this.state.lists[source.droppableId];
+    const destinationList = this.state.lists[destination.droppableId];
+    const newSourceCardIds = [...sourceList.cardIds];
+    const newDestinationCardIds = [...destinationList.cardIds];
+    newSourceCardIds.splice(source.index, 1);
+    newDestinationCardIds.splice(destination.index, 0, draggableId);
+
+    const newSourceList = {
+      ...sourceList,
+      cardIds: newSourceCardIds,
+    };
+
+    const newDestinationList = {
+      ...destinationList,
+      cardIds: newDestinationCardIds,
+    };
+
+    const newState = {
+      ...this.state,
+      lists: {
+        ...this.state.lists,
+        [newSourceList.id]: newSourceList,
+        [newDestinationList.id]: newDestinationList,
+      },
+    };
+    this.setState(newState);
+  }
+
+  onDragEnd = result => {
+    const { destination, source } = result;
     if (!destination) {
       return;
     } else if (destination.droppableId === source.droppableId
       && destination.index === source.index) {
       return;
     } else if (destination.droppableId === source.droppableId) {
-      const list = this.state.lists[source.droppableId];
-      const newCardIds = [...list.cardIds];
-      newCardIds.splice(source.index, 1);
-      newCardIds.splice(destination.index, 0, draggableId);
-
-      const newList = {
-        ...list,
-        cardIds: newCardIds,
-      };
-
-      const newState = {
-        ...this.state,
-        lists: {
-          ...this.state.lists,
-          [newList.id]: newList,
-        },
-      };
-
-      this.setState(newState);
+      this.sameListDrop(result);
     } else {
-      const sourceList = this.state.lists[source.droppableId];
-      const destinationList = this.state.lists[destination.droppableId];
-      const newSourceCardIds = [...sourceList.cardIds];
-      const newDestinationCardIds = [...destinationList.cardIds];
-      newSourceCardIds.splice(source.index, 1);
-      newDestinationCardIds.splice(destination.index, 0, draggableId);
-
-      const newSourceList = {
-        ...sourceList,
-        cardIds: newSourceCardIds,
-      };
-
-      const newDestinationList = {
-        ...destinationList,
-        cardIds: newDestinationCardIds,
-      };
-
-      const newState = {
-        ...this.state,
-        lists: {
-          ...this.state.lists,
-          [newSourceList.id]: newSourceList,
-          [newDestinationList.id]: newDestinationList,
-        },
-      };
-      this.setState(newState);
+      this.differentListDrop(result);
     }
   }
 
