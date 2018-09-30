@@ -15,10 +15,13 @@ type Props = {}
 const root = document.getElementById('root');
 
 class App extends React.Component<Props, State> {
-  state = initialData;
+  constructor(props: Props) {
+    super(props);
+    this.state = initialData;
+  }
 
-  onDragEnd(result) {
-    const { destination, source } = result;
+  onDragEnd = result => {
+    const { destination, source, draggableId } = result;
 
     if (!destination) {
       return;
@@ -28,6 +31,26 @@ class App extends React.Component<Props, State> {
       && destination.index === source.index) {
       return;
     }
+
+    const list = this.state.lists[source.droppableId];
+    const newCardIds = [...list.cardIds];
+    newCardIds.splice(source.index, 1);
+    newCardIds.splice(destination.index, 0, draggableId);
+
+    const newList = {
+      ...list,
+      cardIds: newCardIds,
+    };
+
+    const newState = {
+      ...this.state,
+      lists: {
+        ...this.state.lists,
+        [newList.id]: newList,
+      },
+    };
+
+    this.setState(newState);
   }
 
   renderLists() {
