@@ -71,7 +71,7 @@ export const initialData = {
   lists: {
     'list-1': {
       id: 'list-1',
-      title: 'Coisas para fazer',
+      title: 'Tarefas urgentes',
       cardIds: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5', 'card-6', 'card-7', 'card-8'],
     },
     'list-2': {
