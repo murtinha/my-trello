@@ -34,6 +34,7 @@
     "no-undef": 0,
     "new-cap": 0,
     "no-console": 0,
+    "no-useless-return": 0,
 
     "no-unused-vars": [2, { "argsIgnorePattern": "^_$", "varsIgnorePattern": "^_$" }],
 

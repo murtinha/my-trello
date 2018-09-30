@@ -5,7 +5,8 @@ export type CardType= {
 
 export type ListType = {
   title: string,
-  cards: Array<CardType>,
+  id: string,
+  cardIds: Array<string>,
 };
 
 export const cards1 = [
@@ -96,4 +97,49 @@ export const list2 = {
 
 export const board = {
   lists: [list1, list2],
+};
+
+export const initialData = {
+  cards: {
+    'card-1': {
+      id: 'card-1',
+      description: 'Capturar imagens de avatar de usuários que já tem avatar em outros serviços como Outlook, Gmail e redes sociais, conforme descrito no card do Git',
+    },
+    'card-2': {
+      id: 'card-2',
+      description: 'Assim que o usuário fizer o primeiro acesso, vamos buscar todos os processos para a OAB dele, precisamos exibir isso para ele, mostrando que a pesquisa está sendo feita',
+    },
+    'card-3': {
+      id: 'card-3',
+      description: 'Quando o processo não for encontrado, possibilitar Tentar pesquisar novamente o processo',
+    },
+    'card-4': {
+      id: 'card-4',
+      description: 'Permitir novos usuarios usarem o produto atraves de um beta release',
+    },
+    'card-5': {
+      id: 'card-5',
+      description: 'Permitir novos usuarios usarem o produto atraves de um beta release',
+    },
+    'card-6': {
+      id: 'card-6',
+      description: 'Ao compartilhar processo com pessoa, na tela de criar login, contextualizar melhor o motivo do preenchimento dos dados',
+    },
+    'card-7': {
+      id: 'card-7',
+      description: 'Assim que o usuário fizer o primeiro acesso, vamos buscar todos os processos para a OAB dele, precisamos exibir isso para ele, mostrando que a pesquisa está sendo feita',
+    },
+    'card-8': {
+      id: 'card-8',
+      description: 'Assim que o usuário fizer o primeiro acesso, vamos buscar todos os processos para a OAB dele, precisamos exibir isso para ele, mostrando que a pesquisa está sendo feita',
+    },
+  },
+  lists: {
+    'list-1': {
+      id: 'list-1',
+      title: 'Coisas para fazer',
+      cardIds: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5', 'card-6', 'card-7', 'card-8'],
+    },
+  },
+  listOrder: ['list-1'],
 };

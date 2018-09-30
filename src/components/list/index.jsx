@@ -2,18 +2,20 @@
 
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import type { ListType } from '../../data';
+import type { ListType, CardType } from '../../data';
 import Card from '../card';
 
 import './style.css';
 
 type Props = {
   list: ListType,
+  cards: CardType,
 }
 
 class List extends React.Component<Props> {
   render() {
-    const { cards, title, id } = this.props.list;
+    const { cards, list } = this.props;
+    const { id, title } = list;
     return (
       <div className="List">
         <div className="List-header">

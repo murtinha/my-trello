@@ -8,7 +8,7 @@ import './style.css';
 type Props = {
   card: {
     description: string,
-    id: number,
+    id: string,
   },
   index: number,
 }
